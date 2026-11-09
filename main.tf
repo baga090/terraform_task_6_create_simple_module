@@ -12,9 +12,8 @@ provider "azurerm" {
 }
 
 module "resource_group_storage" {
-  source  = "Azure/resource-group/azurerm"
-  version = "1.1.0"
-
-  resource_group_name = "taras-module-rg"
-  location            = "West Europe"
+  source               = "./modules/resource_group_storage"
+  resource_group_name  = "taras-module-rg"
+  location             = "West Europe"
+  storage_account_name = "tarasmodulestorage123"
 }
